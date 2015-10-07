@@ -45,4 +45,23 @@ end
 
 gem 'rails_12factor', group: :production
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'faker'
+  # gem 'spring' # speeds up app
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'codeclimate-test-reporter', require: nil
+end
+
+group :development do # debugging
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 
