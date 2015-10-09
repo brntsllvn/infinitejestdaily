@@ -8,9 +8,6 @@ class QuotesController < ApplicationController
     @quotes = Quote.all
   end
 
-  def show
-  end
-
   def new
     @quote = Quote.new
   end
@@ -21,7 +18,7 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
     if @quote.save
-      render :show,  notice: 'Quote was successfully created'
+      redirect_to root_path,  notice: "Added: #{@quote.quote}"
     else
       render :new, alert: 'Whoops'
     end
@@ -29,7 +26,7 @@ class QuotesController < ApplicationController
 
   def update
     if @quote.update(quote_params)
-      redirect_to @quote, notice: 'Quote was successfully updated'
+      redirect_to @quote, notice: 'Updated'
     else
       render :edit
     end
@@ -37,7 +34,7 @@ class QuotesController < ApplicationController
 
   def destroy
     @quote.destroy
-    redirect_to quotes_url, notice: 'Quote was successfully destroyed'
+    redirect_to root_path, notice: 'Quote destroyed'
   end
 
   private

@@ -1,29 +1,9 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Quotes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Quote</th>
-      <th>Identification count</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @quotes.each do |quote| %>
-      <tr>
-        <td><%= quote.quote %></td>
-        <td><%= quote.identification_count %></td>
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @quotes.each do |quote| %>
 
-<br>
+<%= quote.quote %>
+<%= quote.identification_count %>
 
-<%= link_to 'New Quote', new_quote_path %>
+<% end %>
