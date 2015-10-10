@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController  
   http_basic_authenticate_with name: Figaro.env.un, password: Figaro.env.pw, except: [:index, :vote]
-  #   http_basic_authenticate_with name: ENV['un'], password: ENV['pw'], except: :index
+  # http_basic_authenticate_with name: ENV['un'], password: ENV['pw'], except: :index
 
   before_action :set_quote, only: [:vote, :edit, :update, :destroy]
 

@@ -1,3 +1,15 @@
 // Place all the styles related to the Quotes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.quote {
+    display: block;
+    width: 335px;
+    font-size: 75px;
+    line-height: 44px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+    padding: 5px 0;
+    border-radius: 0;
+}
