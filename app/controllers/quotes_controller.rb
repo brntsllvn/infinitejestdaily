@@ -2,10 +2,22 @@ class QuotesController < ApplicationController
   http_basic_authenticate_with name: Figaro.env.un, password: Figaro.env.pw, except: :index
   #   http_basic_authenticate_with name: ENV['un'], password: ENV['pw'], except: :index
 
-  before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  before_action :set_quote, only: [:vote, :edit, :update, :destroy]
 
   def index
-    @quotes = Quote.all
+    @quote = Quote.order('RANDOM()').first
+  end
+
+  def vote
+    @vote = Vote.create(quote: @quote)
+
+    respond_to do |format|
+      format.html do
+        flash[:alert] = 'Only once, babe' if @vote.invalid?
+        redirect_to :back
+      end
+      format.js # convention: render template w/ same name as action: vote
+    end
   end
 
   def new

@@ -1,9 +1,6 @@
 
+<%= @quote.quote %>
 
+<%= link_to 'identify', vote_quote_path(@quote), method: :post, remote: true %>
 
-<% @quotes.each do |quote| %>
-
-<%= quote.quote %>
-<%= quote.identification_count %>
-
-<% end %>
+<span id='quote_<%= @quote.id %>_votes'><%= @quote.votes.count %></span>
