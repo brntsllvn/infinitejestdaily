@@ -1,11 +1,16 @@
-<div class='well'>
+<div class='container'>
 
-  <h1 class='quote'><%= @quote.quote %></h1>
+  <div class='row vertical-center-row col-md-12 text-center'>
+    <h1 class='quote'><%= @quote.quote %></h1>
 
-  <br>
+    <span>identify</span>
 
-  <%= link_to 'identify', vote_quote_path(@quote), method: :post, remote: true %>
+    <%= link_to vote_quote_path(@quote), method: :post, remote: true do %>
+    <i class="glyphicon glyphicon-arrow-up" aria-hidden="true"></i>  
+    <% end %>
 
-  <span id='quote_<%= @quote.id %>_votes'><%= @quote.votes.count %></span>
+    <span id='quote_<%= @quote.id %>_votes'><%= @quote.votes.count %></span>
+
+  </div>
 
 </div>
