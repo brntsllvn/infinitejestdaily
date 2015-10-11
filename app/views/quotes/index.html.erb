@@ -4,8 +4,8 @@
 
   <br>
 
-
   <%= link_to 'identify', vote_quote_path(@quote), method: :post, remote: true %>
+
   <span id='quote_<%= @quote.id %>_votes'><%= @quote.votes.count %></span>
 
 </div>
