@@ -14,7 +14,7 @@
 // jquery needs to be first! 
 //= require jquery 
 //= require jquery_ujs
-//= require turbolinks
+
 //= require bootstrap.min
 //= require bootstrap-sprockets
 //= require_tree .
