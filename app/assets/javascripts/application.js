@@ -11,9 +11,10 @@
 // about supported directives.
 //
 
+// jquery needs to be first! 
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.min
 //= require bootstrap-sprockets
-//= require jquery_ujs
-//= require jquery
