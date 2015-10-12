@@ -15,5 +15,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require bootstrap.min // Add it after jquery and jquery_ujs
+//= require bootstrap.min // Add after jquery and jquery_ujs
 //= require bootstrap-sprockets
