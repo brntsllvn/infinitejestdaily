@@ -29,7 +29,7 @@ html, body {
 }
 
 h1.quote {
-  font-size: 65px; 
+  font-size: 5.0vw; 
   border-bottom: 2px dotted;
   margin: 15px;
   padding: 5px;
@@ -37,9 +37,16 @@ h1.quote {
 
 span {
   font-size: 30px;
-  /*   padding: 15px; */
 }
 
 .glyphicon {
   color: #E0E0E0 !important; 
 }
+
+/* @media (max-width: @screen-xs) {
+  body{font-size: 10px;}
+}
+
+@media (max-width: @screen-sm) {
+  body{font-size: 14px;}
+} */
