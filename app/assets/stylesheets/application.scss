@@ -17,8 +17,29 @@
 
 html, body {
   height: 100%;
+  color: #E0E0E0 ;
+  background-color: black;
+  overflow: hidden;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
 }
 
 .vertical-center-row {
-  vertical-align: middle;
+  position: relative;
+  top: 35%;
+}
+
+h1.quote {
+  font-size: 65px; 
+  border-bottom: 2px dotted;
+  margin: 15px;
+  padding: 5px;
+}
+
+span {
+  font-size: 30px;
+  /*   padding: 15px; */
+}
+
+.glyphicon {
+  color: #E0E0E0 !important; 
 }
