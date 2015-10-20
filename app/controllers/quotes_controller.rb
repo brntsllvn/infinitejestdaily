@@ -8,18 +8,6 @@ class QuotesController < ApplicationController
     @quote = Quote.order('RANDOM()').first
   end
 
-  def vote
-    @vote = Vote.create(quote: @quote)
-
-    respond_to do |format|
-      format.html do
-        flash[:alert] = 'Only once, babe' if @vote.invalid?
-        redirect_to :back
-      end
-      format.js # convention: render template w/ same name as action: vote
-    end
-  end
-
   def new
     @quote = Quote.new
   end
@@ -47,6 +35,18 @@ class QuotesController < ApplicationController
   def destroy
     @quote.destroy
     redirect_to root_path, notice: 'Quote destroyed'
+  end
+
+  def vote
+    @vote = Vote.create(quote: @quote)
+
+    respond_to do |format|
+      format.html do
+        flash[:alert] = 'Only once, babe' if @vote.invalid?
+        redirect_to :back
+      end
+      format.js # convention: render template w/ same name as action: vote
+    end
   end
 
   private
