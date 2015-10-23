@@ -1,15 +1,11 @@
 <div class='col-md-6 col-md-offset-3 dot'>
-  <h1 class='quote'><%= @quote.clean_quote %></h1>
-  <h2 class='quote'><%= "p. #{@quote.page_number}" %></h2>
+  <h3 class='quote'><%= @quote.clean_quote %></h3>
+  <h4 class='quote'><%= "p. #{@quote.page_number}" %></h4>
 </div>
 
-<div class='col-md-6 col-md-offset-3 identify'>
-  <span id='quote_<%= @quote.id %>_votes'><%= @quote.votes.count %></span>
-
-  <%= link_to vote_quote_path(@quote), method: :post, remote: true do %>
+<div class='col-md-6 col-md-offset-3'>
+  <%= button_to vote_quote_path(@quote), method: :post, class: 'btn-very-large', remote: true do %>
+  <span id='quote_<%= @quote.id %>_votes'><%= "#{@quote.votes.count} Identify" %></span>
   <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>  
-  <% end %>
-
-  <span>Identify</span>
-
+  <% end %>  
 </div>
