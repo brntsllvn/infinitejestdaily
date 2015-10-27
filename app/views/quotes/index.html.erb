@@ -1,4 +1,12 @@
 <div class='col-md-6 col-md-offset-3 dot'>
   <h3 class='quote'><%= @quote.clean_quote %></h3>
-  <h4 class='quote'><%= "p. #{@quote.page_number}" %></h4>
+  <h3 class='quote'><%= "p. #{@quote.page_number}" %></h3>
+</div>
+
+<br>
+
+<div class='col-md-6 col-md-offset-3 '>
+
+  <%= link_to image_tag("twitter-icon.png"), "https://twitter.com/intent/tweet?text=#{ @quote.clean_quote } p. #{@quote.page_number}", class: "twitter-share-button twitter-icon", target: "_blank" %>
+
 </div>
