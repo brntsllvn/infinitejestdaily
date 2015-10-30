@@ -20,7 +20,7 @@ html, body {
   color: #E0E0E0 ;
   background-color: black;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; 
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 
 .vertical-center-row {
@@ -37,9 +37,9 @@ img {
   height: 100px; 
 }
 
-footer {
+div.footer {
   position: absolute;
-  bottom: 0;
+  bottom: 25%;
 }
 
 
