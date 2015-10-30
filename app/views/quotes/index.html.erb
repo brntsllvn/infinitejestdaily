@@ -1,11 +1,16 @@
-<div class='col-md-6 col-md-offset-3 dot'>
-  <h4 class='quote'><%= @quote.clean_quote %></h4>
-  <h4 class='quote'><%= "p. #{@quote.page_number}" %></h4>
-</div>
+<h3>Infinite Jest</h3>
 
 <br>
 
-<div class='col-md-6 col-md-offset-3 '>
-  <%= link_to image_tag("twitter-icon.png"), "https://twitter.com/intent/tweet?text=#{ @quote.clean_quote } p. #{@quote.page_number}", class: "twitter-share-button twitter-icon", target: "_blank" %>
+<div class='col-md-6 col-md-offset-3 dot'>
+  <p class='quote'><%= @quote.clean_quote %></p>
+  <p class='quote'><%= "p. #{@quote.page_number}" %></p>
 </div>
 
+<div class='col-md-6 col-md-offset-3 '>
+  <%= link_to image_tag("twitter-icon.png"), "https://twitter.com/intent/tweet?text=#{ @quote.clean_quote } p. #{@quote.page_number} via @jestdaily", class: "twitter-share-button twitter-icon", target: "_blank" %>
+</div>
+
+<div class='col-md-6 col-md-offset-3 '>
+  <p>Wallace, David Foster. Infinite Jest. Little, Brown and Company, 1996</p>
+</div>
